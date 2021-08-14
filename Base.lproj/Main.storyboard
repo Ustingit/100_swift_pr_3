@@ -3,10 +3,40 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="UjA-SB-w1h">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="wxX-xA-gnn" customClass="DetailViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3F4-vs-ChF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bqe-rt-a5G">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UeX-rT-UNd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bqe-rt-a5G" firstAttribute="top" secondItem="3F4-vs-ChF" secondAttribute="topMargin" constant="-44" id="38u-vd-SbR"/>
+                            <constraint firstItem="Bqe-rt-a5G" firstAttribute="centerY" secondItem="3F4-vs-ChF" secondAttribute="centerY" id="OWp-8L-Cwu"/>
+                            <constraint firstItem="Bqe-rt-a5G" firstAttribute="centerX" secondItem="3F4-vs-ChF" secondAttribute="centerX" id="TBe-S3-lBw"/>
+                            <constraint firstItem="Bqe-rt-a5G" firstAttribute="leading" secondItem="UeX-rT-UNd" secondAttribute="leading" id="phJ-pP-K5R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Bqe-rt-a5G" id="wnh-Dy-t0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfg-zj-ia7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1979.7101449275365" y="70.982142857142847"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="UzS-fA-s03">
             <objects>
