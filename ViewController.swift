@@ -34,6 +34,8 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
         cell.textLabel?.text = pictures[indexPath.row]
+        cell.textLabel?.textColor = UIColor(red: 0.22, green: 0.33, blue: 0.53, alpha: 1.0)
+        cell.textLabel?.font = UIFont(name: cell.textLabel!.font!.fontName, size: 20)
         
         return cell
     }
