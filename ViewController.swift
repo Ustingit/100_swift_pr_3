@@ -27,6 +27,8 @@ class ViewController: UITableViewController {
         }
         
         pictures.sort()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showScore))
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,6 +52,13 @@ class ViewController: UITableViewController {
             
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    @objc func showScore() {
+        let ac = UIAlertController(title: "Images count", message: "There are \(pictures.count) images", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(ac, animated: true)
     }
 }
 
